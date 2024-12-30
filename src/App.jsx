@@ -1,17 +1,18 @@
-import { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
-function App() {
+const App = () => {
   return (
-   <>
+    <>
       <Navbar />
-      <Hero />
-      <Footer />
-      </>
-  )
-}
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        {/* Add more routes here */}
+      </Routes>
+    </>
+  );
+};
 
-export default App
+export default App;

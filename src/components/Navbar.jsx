@@ -1,44 +1,47 @@
-// src/Navbar.jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="">
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-8">
-        <div className="flex items-center  h-16">
-          <div className="flex items-center">
-            <span className="text-xl font-bold">Skill Sphere</span>
-          </div>
-          <div className="hidden md:flex flex justify-between space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-blue-500">Home</a>
-            <a href="#courses" className="text-gray-700 hover:text-blue-500">Courses</a>
-            <a href="#mentors" className="text-gray-700 hover:text-blue-500">Mentors</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-blue-500">Testimonials</a>
-            <a href="#join" className="text-gray-700 hover:text-blue-500">Join</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-500">Contact Us</a>
-            <a href="#signin" className="text-gray-700 hover:text-blue-500">Sign In</a>
-          </div>
-          <div className="flex md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-blue-500 focus:outline-none">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+    <nav className="bg-purple-900 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-2xl font-bold">Si</div>
+        {/* Desktop Links */}
+        <ul className="hidden md:flex space-x-8">
+          <li><Link to="/" className="hover:text-gray-300">Home</Link></li>
+          <li><Link to="/courses" className="hover:text-gray-300">Courses</Link></li>
+          <li><Link to="/mentors" className="hover:text-gray-300">Mentors</Link></li>
+          <li><Link to="/testimonials" className="hover:text-gray-300">Testimonials</Link></li>
+          <li><Link to="/contact" className="hover:text-gray-300">Contact</Link></li>
+        </ul>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <ul className="absolute top-14 left-0 w-full bg-purple-900 flex flex-col items-center space-y-4 py-4 md:hidden">
+            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+            <li><Link to="/courses" onClick={() => setIsMenuOpen(false)}>Courses</Link></li>
+            <li><Link to="/mentors" onClick={() => setIsMenuOpen(false)}>Mentors</Link></li>
+            <li><Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</Link></li>
+            <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
+          </ul>
+        )}
+        <div className="hidden md:flex space-x-4">
+        <button className="px-4 py-2 bg-transparent border border-white rounded hover:bg-white hover:text-purple-900">
+          Sign In
+        </button>
+        <button className="px-4 py-2 bg-white text-purple-900 rounded hover:bg-gray-200">
+          Register
+        </button>
       </div>
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#home" className="block text-gray-700 hover:text-blue-500">Home</a>
-          <a href="#courses" className="block text-gray-700 hover:text-blue-500">Courses</a>
-          <a href="#mentors" className="block text-gray-700 hover:text-blue-500">Mentors</a>
-          <a href="#testimonials" className="block text-gray-700 hover:text-blue-500">Testimonials</a>
-          <a href="#join" className="block text-gray-700 hover:text-blue-500">Join</a>
-          <a href="#contact" className="block text-gray-700 hover:text-blue-500">Contact Us</a>
-          <a href="#signin" className="block text-gray-700 hover:text-blue-500">Sign In</a>
-        </div>
       </div>
     </nav>
   );
