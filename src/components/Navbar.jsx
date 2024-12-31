@@ -18,7 +18,7 @@ const Navbar = () => {
             <li><Link to="/courses" className="hover:text-gray-300">Courses</Link></li>
             <li><Link to="/mentors" className="hover:text-gray-300">Mentors</Link></li>
             <li><Link to="/testimonials" className="hover:text-gray-300">Testimonials</Link></li>
-            <li><Link to="/contact" className="hover:text-gray-300">Contact</Link></li>
+            <li><Link to="/ContactForm" className="hover:text-gray-300">Contact</Link></li>
           </ul>
 
           {/* Sign In and Register Buttons */}

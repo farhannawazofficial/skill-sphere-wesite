@@ -1,92 +1,139 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay"; // Add this if autoplay requires specific styles
-import { Pagination } from "swiper";
-
-const testimonials = [
-  {
-    name: "Andrew Williams",
-    role: "UX/UI Designer",
-    review:
-      "I have been a Junior Graphic Designer for more than 10 years. Some things are problems that I had and teach how to solve them. That's why this course is so great!",
-    img: "path-to-andrew-image.jpg", // Replace with the correct image path
-    stars: 5,
-  },
-  {
-    name: "Cristian Doru Barin",
-    role: "Photoshop Instructor",
-    review:
-      "I have been a Junior Graphic Designer for more than 10 years. Some things are problems that I had and teach how to solve them. That's why this course is so great!",
-    img: "path-to-cristian-image.jpg", // Replace with the correct image path
-    stars: 5,
-  },
-  {
-    name: "Tanzeel Ur Rehman",
-    role: "UX/UI Designer",
-    review:
-      "I have been a Junior Graphic Designer for more than 10 years. Some things are problems that I had and teach how to solve them. That's why this course is so great!",
-    img: "path-to-tanzeel-image.jpg", // Replace with the correct image path
-    stars: 5,
-  },
-];
+import React, { useState, useEffect } from "react";
 
 const Testimonials = () => {
-  return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6">
-        {/* Header Section */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-4">What Our Happy Students Say</h2>
-          <p className="text-gray-500">
-            Build skills with our courses and mentor from world-class companies.
-          </p>
-        </div>
+  const testimonials = [
+    {
+      name: "Andrew Williams",
+      role: "UI/UX Designer",
+      feedback:
+        "I have been a Junior Graphic Designer for more than 10 years. This course is so great!",
+      image: "https://marketplace.canva.com/EAF21qlw744/1/0/1600w/canva-blue-modern-facebook-profile-picture-mtu4sNVuKIU.jpg", // Replace with actual image URLs
+    },
+    {
+      name: "Andrew Williams",
+      role: "UI/UX Designer",
+      feedback:
+        "I have been a Junior Graphic Designer for more than 10 years. This course is so great!",
+      image: "https://cdn.prod.website-files.com/639ff8596ae419fae300b099/641017314cc67fbb88c517a7_good-linkedin-profile-photo-right-expression-1000x1000.jpeg", // Replace with actual image URLs
+    },
+    {
+      name: "Andrew Williams",
+      role: "UI/UX Designer",
+      feedback:
+        "I have been a Junior Graphic Designer for more than 10 years. This course is so great!",
+      image: "https://cdn.prod.website-files.com/639ff8596ae419fae300b099/641017314cc67fbb88c517a7_good-linkedin-profile-photo-right-expression-1000x1000.jpeg", // Replace with actual image URLs
+    },
+    {
+      name: "Cristian Doru Barin",
+      role: "Photoshop Instructor",
+      feedback:
+        "Some things are problems that I had and teach how to solve them. Excellent mentor!",
+      image: "https://cdn.prod.website-files.com/639ff8596ae419fae300b099/641017314cc67fbb88c517a7_good-linkedin-profile-photo-right-expression-1000x1000.jpeg", // Replace with actual image URLs
+    },
+    {
+      name: "Tanzeel Ur Rehman",
+      role: "SEO Expert",
+      feedback:
+        "This course helped me grow as an SEO expert. Amazing platform!",
+      image: "https://cdn.prod.website-files.com/639ff8596ae419fae300b099/641017314cc67fbb88c517a7_good-linkedin-profile-photo-right-expression-1000x1000.jpeg", // Replace with actual image URLs
+    },
+    {
+      name: "Brad Schiff",
+      role: "Web Developer",
+      feedback:
+        "This platform is the perfect place to start your career. Great mentors and courses!",
+      image: "https://cdn.prod.website-files.com/639ff8596ae419fae300b099/641017314cc67fbb88c517a7_good-linkedin-profile-photo-right-expression-1000x1000.jpeg", // Replace with actual image URLs
+    },
+  ];
 
-        {/* Swiper Section */}
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000 }}
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white rounded-lg shadow-md p-6 text-center">
-                <img
-                  src={testimonial.img}
-                  alt={testimonial.name}
-                  className="w-16 h-16 mx-auto rounded-full mb-4"
-                />
-                <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-                <p className="text-gray-500">{testimonial.role}</p>
-                <div className="flex justify-center my-2">
-                  {Array(testimonial.stars)
-                    .fill(0)
-                    .map((_, i) => (
-                      <span key={i} className="text-yellow-500 text-lg">★</span>
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const totalDots = 2; // Number of dots
+  const itemsPerDot = Math.ceil(testimonials.length / totalDots);
+
+  // Automatically change slides every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === totalDots - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [totalDots]);
+
+  return (
+    <div className="bg-gray-100 py-12">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-6">
+          What Our Happy Students Say
+        </h2>
+        <p className="text-center text-gray-600 mb-10">
+          Build skills with our courses and mentors from world-class companies.
+        </p>
+
+        {/* Testimonials Wrapper */}
+        <div className="relative overflow-hidden">
+          <div
+            className="flex transition-transform duration-700 ease-in-out"
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+            }}
+          >
+            {Array(totalDots)
+              .fill(0)
+              .map((_, dotIndex) => (
+                <div
+                  key={dotIndex}
+                  className="flex flex-none w-full space-x-4 justify-center"
+                >
+                  {testimonials
+                    .slice(
+                      dotIndex * itemsPerDot,
+                      (dotIndex + 1) * itemsPerDot
+                    )
+                    .map((testimonial, index) => (
+                      <div
+                        key={index}
+                        className="flex-none w-1/3 md:w-1/4 text-center bg-white rounded-lg shadow-md p-6 mx-4"
+                      >
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-20 h-20 rounded-full mx-auto mb-4"
+                        />
+                        <p className="text-gray-600 italic mb-4">
+                          "{testimonial.feedback}"
+                        </p>
+                        <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                        <p className="text-sm text-gray-500">
+                          {testimonial.role}
+                        </p>
+                      </div>
                     ))}
                 </div>
-                <p className="text-gray-600 mt-2">{testimonial.review}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        {/* Review Button */}
-        <div className="text-right mt-6">
-          <button className="border border-purple-700 text-purple-700 px-6 py-2 rounded hover:bg-purple-700 hover:text-white">
-            Give Your Review
-          </button>
+              ))}
+          </div>
+        </div>
+
+        {/* Dots Navigation */}
+        <div className="flex justify-center mt-6">
+          {Array(totalDots)
+            .fill(0)
+            .map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-3 w-3 rounded-full mx-1 transition-colors duration-300 ${
+                  currentIndex === index
+                    ? "bg-purple-600"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+              ></button>
+            ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -3,7 +3,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Courses from "./components/Courses";
 import Mentors from "./components/Mentors";
-// import Testimonials from "./components/Testimonials";
+import Testimonials from "./components/Testimonials";
+import NewsletterAndFooter from "./components/NewsletterAndFooter";
+import ContactForm from "./components/ContactForm";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -11,11 +13,13 @@ const App = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={ <><Hero /> <Courses /> <Mentors />  </> } />
+        <Route path="/" element={ <><Hero /> <Courses /> <Mentors /> <Testimonials />  </> } />
         <Route path="/courses" element={<Courses />} />
         <Route path="/mentors" element={<Mentors />} />
-        {/* <Route path="/mentors" element={ <Testimonials />} /> */}
+        <Route path="/testimonials" element={ <Testimonials />} />
+        <Route path="/ContactForm" element={ <ContactForm />} />
       </Routes>
+      <NewsletterAndFooter />
     </>
   );
 };
