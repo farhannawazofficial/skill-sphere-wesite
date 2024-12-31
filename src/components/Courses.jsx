@@ -30,10 +30,10 @@ const coursesData = [
   },
   {
     id: 4,
-    title: "Learn React with Redux Toolkit",
-    category: "Web Development",
+    title: "Learn English Language",
+    category: "English Language",
     price: "$99",
-    image: "https://coderomeos.org/storage/uploads/images/posts/learn-redux-toolkit-with-example-645fd44e360fe.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D12AQGodba7FQwpKA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697613429703?e=2147483647&v=beta&t=VkOVusZ8yqYrVg1-0hnWUBECUakFtwE8Ez3f963UUcM",
     classes: 12,
     rating: 4.5,
   },
@@ -42,7 +42,7 @@ const coursesData = [
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Web Development", "Mobile Development", "Data Science", "Cloud Computing"];
+  const categories = ["All", "Web Development", "Mobile Development", "English Language"];
 
   const filteredCourses =
     selectedCategory === "All"
