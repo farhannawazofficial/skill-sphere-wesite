@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-purple-900 text-white p-4">
+    <nav className="bg-purple-900 text-white sticky top-0 z-50 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">Skills Sphere</div>

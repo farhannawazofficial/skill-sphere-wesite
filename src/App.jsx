@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Courses from "./components/Courses";
 
 const App = () => {
   return (
@@ -9,8 +10,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
-        {/* Add more routes here */}
+        <Route path="/courses" element={<Courses />} />
       </Routes>
+      <Courses/>
     </>
   );
 };
