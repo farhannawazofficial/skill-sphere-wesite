@@ -1,4 +1,6 @@
 import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+
 
 const NewsletterAndFooter = () => {
   return (
@@ -66,14 +68,13 @@ const NewsletterAndFooter = () => {
             <ul>
               <li className="mb-2">
                 <span className="font-bold">Email:</span>{" "}
-                support@example.com
+                skillsphere@contact.com
               </li>
               <li className="mb-2">
-                <span className="font-bold">Phone:</span> +123-456-7890
+                <span className="font-bold">Phone:</span> +92 3197781723
               </li>
               <li className="mb-2">
-                <span className="font-bold">Address:</span> 123 Main Street,
-                Karachi, Pakistan
+                <span className="font-bold">Address:</span> iqbal Colony Mian chunnu, Multan.
               </li>
             </ul>
             <div className="flex space-x-4 mt-4">
@@ -101,7 +102,7 @@ const NewsletterAndFooter = () => {
 
         <div className="mt-8 border-t border-gray-700 pt-6 text-center">
           <p className="text-gray-500">
-            &copy; {new Date().getFullYear()} Your Company. All rights
+            &copy; {new Date().getFullYear()} Created by Farhan Nawaz. All rights
             reserved.
           </p>
         </div>

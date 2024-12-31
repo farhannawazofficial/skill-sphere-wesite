@@ -42,7 +42,7 @@ const coursesData = [
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Web Development", "Mobile Development", "English Language"];
+  const categories =  ["All", "Web Development", "English Language"];
 
   const filteredCourses =
     selectedCategory === "All"
@@ -51,7 +51,7 @@ const Courses = () => {
 
   return (
     <section className="p-8">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-6 ">
         <h2 className="text-3xl font-bold">Popular Courses</h2>
         <button className="px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-800">
           Explore Classes
