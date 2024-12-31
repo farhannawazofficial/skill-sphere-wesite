@@ -24,13 +24,13 @@ const Navbar = () => {
           {/* Sign In and Register Buttons */}
           <div className="flex space-x-4">
             <Link
-              to="/signin"
+              to="/SignPage"
               className="px-4 py-2 border border-white rounded hover:bg-white hover:text-purple-900 transition"
             >
               Sign In
             </Link>
             <Link
-              to="/register"
+              to="/SignPage"
               className="px-4 py-2 bg-white text-purple-900 rounded hover:bg-gray-200 transition"
             >
               Register
