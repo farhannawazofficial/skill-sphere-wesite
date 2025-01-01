@@ -57,18 +57,18 @@ const Navbar = () => {
             <li><Link to="/courses" onClick={() => setIsMenuOpen(false)}>Courses</Link></li>
             <li><Link to="/mentors" onClick={() => setIsMenuOpen(false)}>Mentors</Link></li>
             <li><Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</Link></li>
-            <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
+            <li><Link to="/contactForm" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
           </ul>
           <div className="flex flex-col items-left mt-4 space-y-4">
             <Link
-              to="/signin"
+              to="/SignPage"
               className="px-4 py-2 border border-whaite rounded hover:bg-[#5bbacc] hover:text-black transition"
               onClick={() => setIsMenuOpen(false)}
             >
               Sign In
             </Link>
             <Link
-              to="/register"
+              to="/SignPage"
               className="px-4 py-2 bg-[#5bbacc] text-black rounded hover:bg-[#03adcd] transition"
               onClick={() => setIsMenuOpen(false)}
             >
