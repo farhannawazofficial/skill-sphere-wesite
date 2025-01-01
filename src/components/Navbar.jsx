@@ -27,13 +27,13 @@ const Navbar = () => {
           <div className="flex space-x-4">
             <Link
               to="/SignPage"
-              className="px-4 py-2 border border-white rounded hover:bg-white hover:text-purple-900 transition"
+              className="px-4 py-2 border border-whaite rounded hover:bg-[#5bbacc] hover:text-black transition"
             >
               Sign In
             </Link>
             <Link
               to="/SignPage"
-              className="px-4 py-2 bg-white text-purple-900 rounded hover:bg-gray-200 transition"
+              className="px-4 py-2 bg-[#5bbacc] text-black rounded hover:bg-[#03adcd] transition"
             >
               Register
             </Link>
@@ -62,14 +62,14 @@ const Navbar = () => {
           <div className="flex flex-col items-left mt-4 space-y-4">
             <Link
               to="/signin"
-              className="px-4 py-2 border border-white rounded hover:bg-white hover:text-purple-900 transition"
+              className="px-4 py-2 border border-whaite rounded hover:bg-[#5bbacc] hover:text-black transition"
               onClick={() => setIsMenuOpen(false)}
             >
               Sign In
             </Link>
             <Link
               to="/register"
-              className="px-4 py-2 bg-white text-purple-900 rounded hover:bg-gray-200 transition"
+              className="px-4 py-2 bg-[#5bbacc] text-black rounded hover:bg-[#03adcd] transition"
               onClick={() => setIsMenuOpen(false)}
             >
               Register
