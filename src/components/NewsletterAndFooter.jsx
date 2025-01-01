@@ -76,9 +76,7 @@ const NewsletterAndFooter = () => {
                 <span className="font-bold">Phone:</span> 
                 +92 303 4569807
               </li>
-              <li className="mb-2">
-                <span className="font-bold">Address:</span> iqbal Colony Mian chunnu, Multan.
-              </li>
+             
             </ul>
             <div className="flex space-x-4 mt-4">
               <a
