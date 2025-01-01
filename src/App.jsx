@@ -4,7 +4,8 @@ import Hero from "./components/Hero";
 import Courses from "./components/Courses";
 import Mentors from "./components/Mentors";
 import Testimonials from "./components/Testimonials";
-import NewsletterAndFooter from "./components/NewsletterAndFooter";
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import SignPage from "./components/SignPage";
 import { Routes, Route } from "react-router-dom";
@@ -21,7 +22,8 @@ const App = () => {
         <Route path="/ContactForm" element={ <ContactForm />} />
         <Route path="/SignPage" element={ <SignPage />} />
       </Routes>
-      <NewsletterAndFooter />
+      <Newsletter />
+      <Footer />
     </>
   );
 };
