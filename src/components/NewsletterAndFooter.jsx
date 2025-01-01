@@ -68,10 +68,13 @@ const NewsletterAndFooter = () => {
             <ul>
               <li className="mb-2">
                 <span className="font-bold">Email:</span>{" "}
-                skillsphere@contact.com
+                skillssphere777@gmail.com
               </li>
               <li className="mb-2">
-                <span className="font-bold">Phone:</span> +92 3197781723
+                <span className="font-bold">Phone:</span> +92 308 2437671
+                <br />
+                <span className="font-bold">Phone:</span> 
+                +92 303 4569807
               </li>
               <li className="mb-2">
                 <span className="font-bold">Address:</span> iqbal Colony Mian chunnu, Multan.
