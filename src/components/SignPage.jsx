@@ -129,7 +129,7 @@ export default function Form({
     setAuthState
 }) {
     return (
-        <div className=' w-11/12 max-w-[700px] ml-7 my-6 p-20 px-10 py-20 rounded-3xl bg-white border-2 border-gray-100'>
+        <div className=' w-11/12 max-w-[700px] mx-4 my-6 p-20 px-10 py-20 rounded-3xl bg-white border-2 border-gray-100'>
             <h1 className='text-4xl font-semibold'>Welcome Back</h1>
             <p className='font-medium text-100 text-gray-500 mt-4'>Welcome back! Please enter you details.</p>
             <div className='mt-8'>
