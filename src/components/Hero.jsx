@@ -16,10 +16,10 @@ const Hero = () => {
         Build skills with our courses and mentor from world-class companies.
       </p>
       <div className="mt-8 flex space-x-4">
-        <button className="px-6 py-3 bg-purple-700 text-white rounded-lg shadow-md hover:bg-purple-800">
+        <button className="px-6 py-3 bg-[#5bbacc] text-black rounded-lg shadow-md hover:bg-[#03adcd]">
           Get Started
         </button>
-        <button className="px-6 py-3 bg-white text-purple-700 rounded-lg shadow-md hover:bg-gray-100">
+        <button className="px-6 py-3 bg-white text-black rounded-lg shadow-md hover:bg-gray-100">
           Learn More
         </button>
       </div>

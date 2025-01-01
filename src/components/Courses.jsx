@@ -53,7 +53,7 @@ const Courses = () => {
     <section className="p-8">
       <div className="flex justify-between items-center mb-6 ">
         <h2 className="text-3xl font-bold">Popular Courses</h2>
-        <button className="px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-800">
+        <button className="px-4 py-2 bg-[#5bbacc] text-black rounded hover:bg-[#03adcd]">
           Explore Classes
         </button>
       </div>
@@ -66,7 +66,7 @@ const Courses = () => {
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 rounded ${
               selectedCategory === category
-                ? "bg-purple-700 text-white"
+                ? "bg-[#03adcd] text-black"
                 : "bg-gray-100 text-gray-700"
             }`}
           >
@@ -86,7 +86,7 @@ const Courses = () => {
             <div className="p-4">
               <h3 className="text-lg font-bold mb-2">{course.title}</h3>
               <p className="text-sm text-gray-500 mb-2">{course.category}</p>
-              <p className="text-lg font-semibold text-purple-700">{course.price}</p>
+              <p className="text-lg font-semibold text-[#03adcd]">{course.price}</p>
               <div className="flex items-center justify-between mt-4 text-sm text-gray-500">
                 <span>{course.classes} Classes</span>
                 <span>⭐ {course.rating}</span>
