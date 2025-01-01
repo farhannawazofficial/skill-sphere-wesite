@@ -67,7 +67,7 @@ const Testimonials = () => {
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-6">
           What Our Happy Students Say
-        </h2>
+        </h2>jpeg
         <p className="text-center text-gray-600 mb-10">
           Build skills with our courses and mentors from world-class companies.
         </p>
@@ -126,7 +126,7 @@ const Testimonials = () => {
                 onClick={() => setCurrentIndex(index)}
                 className={`h-3 w-3 rounded-full mx-1 transition-colors duration-300 ${
                   currentIndex === index
-                    ? "bg-purple-600"
+                    ? "bg-[#03adcd]"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
               ></button>

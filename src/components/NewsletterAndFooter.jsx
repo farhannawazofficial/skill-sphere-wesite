@@ -23,7 +23,7 @@ const NewsletterAndFooter = () => {
             />
             <button
               type="submit"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md"
+              className="bg-[#5bbacc] hover:bg-[#03adcd] text-black px-6 py-3 rounded-md"
             >
               Subscribe
             </button>
