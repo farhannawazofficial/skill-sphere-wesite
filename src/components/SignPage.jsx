@@ -152,10 +152,10 @@ export default function Form({
                         <input  type="checkbox" id='remember'/>
                         <label className='ml-1 font-medium text-sm' for="remember">Remember for 30 days</label>
                     </div>
-                    <button className='font-medium text-sm text-violet-500'>Forgot password</button>
+                    <button className='font-medium text-sm text-blue-900'>Forgot password</button>
                 </div>
                 <div className='mt-8 flex flex-col gap-y-4'>
-                    <button className='active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4 bg-violet-500 rounded-xl text-white font-medium text-sm'>Sign in</button>
+                    <button className='active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4 bg-[#5bbacc] hover:bg-[#03adcd] rounded-xl text-black font-medium text-sm'>Sign in</button>
                     <button 
                         className='flex items-center justify-center gap-2 active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4 text-sm rounded-xl text-gray-700 font-semibold text-lg border-2 border-gray-100 '>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +171,7 @@ export default function Form({
                     <p className='font-medium text-sm'>Don't have an account?</p>
                     <button 
                         onClick={() => setAuthState('register')}
-                        className='ml-2 font-medium text-sm text-violet-500'>Sign up</button>
+                        className='ml-2 font-medium text-sm text-[#5bbacc] hover:text-[#03adcd]'>Sign up</button>
                 </div>
             </div>
         </div>
